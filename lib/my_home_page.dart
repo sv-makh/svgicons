@@ -19,7 +19,7 @@ class MyHomePage extends StatelessWidget {
       body: FutureBuilder<String>(
         future: fetchIconData(),
         builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-          if (snapshot.hasData) {
+          if ((snapshot.hasData) && (snapshot.data != null)) {
             final iconData = PathIconData.fromData(snapshot.data!);
             return Center(
               child: Column(

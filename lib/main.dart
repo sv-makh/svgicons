@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:svgicons/%D1%81ontents_page.dart';
+import 'package:svgicons/path_icon_clean.dart';
 
+import 'flutter_icon.dart';
 import 'my_home_page.dart';
 
 void main() {
@@ -18,7 +21,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const ContentsPage(),
+        '/path': (context) => const MyHomePage(),
+        '/path_icon_clean': (context) => const PathIconCleanPage(),
+        '/flutter_icon': (context) => const FlutterIcon(),
+      },
     );
   }
 }
